@@ -1,0 +1,16 @@
+.Table table {
+  width: 100%;
+}
+
+.Table th {
+  background-color: black;
+  color: white;
+}
+
+.Table .Par {
+  background-color: #ddd;
+}
+
+.Table .Impar {
+  background-color: #ccc;
+}
