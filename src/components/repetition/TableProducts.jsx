@@ -2,7 +2,7 @@ import React from "react";
 import "./TableProducts.css";
 import products from "../../components/data/products";
 
-export default function TableProducts(props) {
+export default function TableProducts() {
   function getLinhas() {
     return products.map((prod, i) => {
       return (

@@ -11,8 +11,8 @@ export default function StudentsList(props) {
   });
 
   return (
-    <div>
-      <ul style={{ listStyle: "none" }}>{studentsJsx}</ul>
+    <div style={{ width: "100%" }}>
+      <ul style={{ listStyle: "none", padding: "0" }}>{studentsJsx}</ul>
     </div>
   );
 }
