@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 
+import UserInfo from "./components/conditional/UserInfo";
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
 import TableProducts from "./components/repetition/TableProducts";
 import StudentsList from "./components/repetition/StudentsList";
@@ -19,6 +20,9 @@ export default function App(_) {
       <div className="Cards">
         <Card titulo="Renderização Condicional" color="#6B5B95">
           <EvenOrOdd numero={20} />
+          <UserInfo user={{ nome: "Fernando" }} />
+          <UserInfo user={{ email: "fer@gmail.com" }} />
+          <UserInfo />
         </Card>
         <Card titulo="Desafio Repetição" color="#3A9AD9">
           <TableProducts />
