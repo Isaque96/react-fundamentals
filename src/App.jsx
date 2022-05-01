@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 
+import Input from "./components/form/Input";
 import IndirectFather from "./components/comunication/IndirectCommunication/Father.jsx";
 import DirectFather from "./components/comunication/DirectCommunication/Father";
 import UserInfo from "./components/conditional/UserInfo";
@@ -20,6 +21,9 @@ export default function App(_) {
     <div className="App">
       <h1>Exercícios Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="Componente Controlado (Input)" color="#FFD700">
+          <Input />
+        </Card>
         <Card titulo="Comunicação Indireta" color="#8B008B">
           <IndirectFather />
         </Card>
