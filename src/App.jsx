@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 
+import DirectFather from "./components/comunication/DirectCommunication/Father";
 import UserInfo from "./components/conditional/UserInfo";
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
 import TableProducts from "./components/repetition/TableProducts";
@@ -18,6 +19,9 @@ export default function App(_) {
     <div className="App">
       <h1>Exercícios Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="Comunicação Direta" color="#D2691E">
+          <DirectFather />
+        </Card>
         <Card titulo="Renderização Condicional" color="#6B5B95">
           <EvenOrOdd numero={20} />
           <UserInfo user={{ nome: "Fernando" }} />
