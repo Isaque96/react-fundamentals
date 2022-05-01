@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 
+import IndirectFather from "./components/comunication/IndirectCommunication/Father.jsx";
 import DirectFather from "./components/comunication/DirectCommunication/Father";
 import UserInfo from "./components/conditional/UserInfo";
 import EvenOrOdd from "./components/conditional/EvenOrOdd";
@@ -19,6 +20,9 @@ export default function App(_) {
     <div className="App">
       <h1>Exercícios Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="Comunicação Indireta" color="#8B008B">
+          <IndirectFather />
+        </Card>
         <Card titulo="Comunicação Direta" color="#D2691E">
           <DirectFather />
         </Card>
