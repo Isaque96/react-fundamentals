@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Display from "./Display";
+import StepForm from "./StepForm";
+import Buttons from "./Buttons";
 import "./Counter.css";
 
 export default class Counter extends Component {
@@ -15,21 +18,21 @@ export default class Counter extends Component {
   };
 
   // Se fizer uma função arrow tanto aqui quanto dentro do onClick funciona
-  inc() {
+  inc = () => {
     this.setState({
       numero: this.state.numero + this.state.passo,
     });
-  }
+  };
 
-  dec() {
+  dec = () => {
     this.setState({
       numero: this.state.numero - this.state.passo,
     });
-  }
+  };
 
-  setPasso = (e) => {
+  setPasso = (novoPasso) => {
     this.setState({
-      passo: +e.target.value,
+      passo: novoPasso,
     });
   };
 
@@ -37,18 +40,9 @@ export default class Counter extends Component {
     return (
       <div className="Counter">
         <h2>Contador</h2>
-        <h3>Valor Atual: {this.state.numero}</h3>
-        <div>
-          <label htmlFor="passoInput">Passo: </label>
-          <input
-            id="passoInput"
-            type="number"
-            value={this.state.passo}
-            onChange={this.setPasso}
-          />
-        </div>
-        <button onClick={(_) => this.inc()}>+</button>
-        <button onClick={(_) => this.dec()}>-</button>
+        <Display numero={this.state.numero} />
+        <StepForm passo={this.state.passo} setPasso={this.setPasso} />
+        <Buttons setInc={this.inc} setDec={this.dec} />
       </div>
     );
   }
