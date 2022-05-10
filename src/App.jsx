@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 
+import Mega from "./components/mega/Mega";
 import Counter from "./components/counter/Counter";
 import Input from "./components/form/Input";
 import IndirectFather from "./components/comunication/IndirectCommunication/Father.jsx";
@@ -22,6 +23,9 @@ export default function App(_) {
     <div className="App">
       <h1>Exercícios Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="Desafio MegaSena" color="#6B5B95">
+          <Mega qtde={6} />
+        </Card>
         <Card titulo="Contador" color="#88B04B">
           <Counter numeroInicial={10} />
         </Card>
